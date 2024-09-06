@@ -22,7 +22,13 @@ export default function Side() {
         2 * Number(angles.sideA) * Number(angles.sideB) * Math.cos(crad)
     ).toFixed(2);
 
-    if (isNaN(sideC) || sideC === 0) {
+    console.log("sideC", sideC);
+
+    if (isNaN(sideC) || sideC == 0) {
+      setResultSide((prevState) => ({
+        ...prevState,
+        c: NaN,
+      }));
       setResultVisible(false);
     } else {
       setResultSide((prevState) => ({
@@ -104,7 +110,7 @@ export default function Side() {
         </div>
       )}
 
-      {!resultVisible && resultSide.c != 0 && (
+      {!resultVisible && isNaN(resultSide.c) && (
         <div className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
           <h3 className="text-xl">
             Utilizando os valores inseridos não é possível calcular o valor dos

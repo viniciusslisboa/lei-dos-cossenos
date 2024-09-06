@@ -46,8 +46,6 @@ export default function Angle() {
       ).toFixed(2)
     );
 
-    console.log(angleA + angleB + angleC);
-
     if (
       isNaN(angleA) ||
       angleA === 0 ||
@@ -56,8 +54,11 @@ export default function Angle() {
       isNaN(angleC) ||
       angleC === 0
     ) {
+      setResult((prevState) => ({
+        ...prevState,
+        sum: angleA,
+      }));
       setResultVisible(false);
-      console.log(result.sum);
     } else {
       setResult((prevState) => ({
         ...prevState,
@@ -135,7 +136,7 @@ export default function Angle() {
         </div>
       )}
 
-      {!resultVisible && result.sum != 0 && (
+      {!resultVisible && (result.sum != 0 || isNaN(result.sum)) && (
         <div className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg mx-4 text-center">
           <h3 className="text-xl">
             Utilizando os valores inseridos não é possível calcular o valor dos
