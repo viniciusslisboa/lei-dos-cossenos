@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center flex-col pt-10 w-full">
-      <h1 className="text-2xl">Calculadora Lei dos Cossenos</h1>
+      <h1 className="text-2xl font-semibold">Calculadora - Lei dos Cossenos</h1>
       <div className="flex pt-10 space-x-8">
         <RadioInput
           label="Calcular ângulos"
@@ -38,7 +38,7 @@ function App() {
       {typeChecked === "side" && <Side />}
       {typeChecked === "angle" && <Angle />}
 
-      <span className="mt-10 text-sm font-semibold ">
+      <span className="mt-10 mb-10 text-sm font-semibold ">
         Developed By{" "}
         <a href="https://github.com/viniciusslisboa" className="text-cyan-600">
           Vinícius Soares Lisboa

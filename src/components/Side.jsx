@@ -90,14 +90,14 @@ export default function Side() {
       </div>
       {resultVisible && (
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="space-x-2">
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+          <div className="space-x-2 flex flex-col gap-4 items-center justify-center lg:flex-row">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Lado A - {resultSide.a}
             </span>
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Lado B - {resultSide.b}
             </span>
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Lado C - {resultSide.c}
             </span>
           </div>

@@ -57,6 +57,7 @@ export default function Angle() {
       angleC === 0
     ) {
       setResultVisible(false);
+      console.log(result.sum);
     } else {
       setResult((prevState) => ({
         ...prevState,
@@ -115,19 +116,19 @@ export default function Angle() {
       </div>
       {resultVisible && result.sum != 0 && (
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="space-x-2">
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+          <div className="space-x-2 flex flex-col gap-6 items-center justify-center lg:flex-row">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Ângulo A - {result.a}
             </span>
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Ângulo B - {result.b}
             </span>
-            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+            <span className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg text-center">
               Ângulo B - {result.c}
             </span>
           </div>
           <div className="mt-6">
-            <span className="px-6 py-4 bg-red-500 text-white rounded-md text-lg">
+            <span className="px-6 py-4 bg-red-500 text-white rounded-md text-lg text-center">
               Soma dos ângulos internos - {result.sum}
             </span>
           </div>
@@ -135,7 +136,7 @@ export default function Angle() {
       )}
 
       {!resultVisible && result.sum != 0 && (
-        <div className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg">
+        <div className="px-6 py-4 bg-gray-700 text-white rounded-md text-lg mx-4 text-center">
           <h3 className="text-xl">
             Utilizando os valores inseridos não é possível calcular o valor dos
             ângulos.
