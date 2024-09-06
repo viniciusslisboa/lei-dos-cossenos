@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="flex justify-center items-center flex-col pt-10 w-full">
-      <div className="flex items-center justify-start w-full gap-[295px]">
-        <img className="h-30 w-50 ml-10" src={logoIFF} alt="" />
+      <div className="flex items-center justify-start w-full gap-[460px]">
+        <img className="h-30 w-50 ml-32" src={logoIFF} alt="" />
         <h1 className="text-2xl font-semibold">
           Calculadora - Lei dos Cossenos
         </h1>
